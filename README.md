@@ -107,13 +107,17 @@ secure-webapp-terraform/
    cd secure-webapp-terraform
    
 2. Initialize Terraform:
-terraform init
+   ```bash
+   terraform init
 
-3. Review your variables if needed, then:
-terraform apply
+
+3. Review and apply
+   ```bash
+   terraform apply
 
 
 💡 Architecture Overview
+
 User
  │
  ▼
@@ -123,7 +127,7 @@ User
 [Internal ALB] (Private Subnet)
  │
  ▼
-[Backend EC2 Instances] (
+[Backend EC2 Instances] 
 
 
 <img width="1702" height="752" alt="Screenshot 2025-07-19 075322" src="https://github.com/user-attachments/assets/48ce0e7b-ce07-4cfb-89bc-1d4049472e81" />
@@ -136,4 +140,5 @@ This setup is fully modular and ready for enhancement (e.g., adding RDS, auto sc
 You can secure the ALB even further using NACLs or security group tightening.
 
 Don't forget to clean up after testing:
+```bash
 terraform destroy
