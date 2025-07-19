@@ -1,0 +1,2 @@
+public ip for proxy 2 is: 34.238.150.160
+public ip for proxy 1 is: 107.23.116.119
