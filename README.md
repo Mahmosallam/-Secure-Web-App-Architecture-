@@ -93,7 +93,7 @@ secure-webapp-terraform/
 - **AWS EC2, ALB, VPC, Subnets, NAT, IGW**
 - **Amazon Linux 2023**
 - **NGINX** (reverse proxy)
-- **Python + Flask** (backend web app)
+- **apache in backend ec2s
 
 ---
 
