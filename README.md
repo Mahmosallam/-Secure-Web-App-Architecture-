@@ -23,32 +23,40 @@ The goal is to **separate the public interface** from the secure backend, ensuri
 secure-webapp-terraform/
 │
 ├── README.md                     -> Project documentation
-├── app.py                        -> Flask web application for the backend
 ├── install_backend.sh            -> Shell script to setup backend EC2 instances
 ├── install_nginx.sh              -> Shell script to setup NGINX on reverse proxy EC2 instances
 ├── variables.tf                  -> Global input variables
 ├── outputs.tf                    -> Global output variables (IP addresses, DNS, etc.)
 ├── main.tf                       -> Root Terraform configuration that ties all modules
 │
-├── templates/
-│   └── nginx.tmpl                -> Template file to render NGINX configuration (if used)
 │
 ├── modules/
 │   │
 │   ├── vpc/
-│   │   └── main.tf               -> Creates the main VPC
+│   │   ├── main.tf               -> Creates the main VPC
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
 │   │
 │   ├── subnets/
 │   │   └── main.tf               -> Defines public and private subnets
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
 │   │
 │   ├── route_tables/
-│   │   └── main.tf               -> Configures route tables and their associations
+│   │   ├── main.tf               -> Configures route tables and their associations
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
 │   │
 │   ├── nat_igw/
 │   │   └── main.tf               -> Creates NAT Gateway and Internet Gateway
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │
 │   │
 │   ├── security_group/
 │   │   └── main.tf               -> Defines security groups for EC2, ALB, etc.
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
 │   │
 │   ├── ec2_backend/
 │   │   ├── main.tf               -> Launches two private EC2 backend instances
