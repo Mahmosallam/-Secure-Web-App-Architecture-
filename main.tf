@@ -121,12 +121,12 @@ module "alb_public" {
 
 
 
-# #backend s3 bucket
+ #backend s3 bucket
 
 
-# resource "aws_s3_bucket" "backend-s3" {
-#   bucket = "backend-tf-test-bucket-sallam"
+ resource "aws_s3_bucket" "backend-s3" {
+   bucket = "backend-tf-test-bucket-sallam"
 
-# }
+ }
 
 
